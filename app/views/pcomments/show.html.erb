@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Author:</b>
+  <%= @pcomment.author %>
+</p>
+
+<p>
+  <b>Authorid:</b>
+  <%= @pcomment.authorid %>
+</p>
+
+<p>
+  <b>Authorprovider:</b>
+  <%= @pcomment.authorprovider %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @pcomment.content %>
+</p>
+
+<p>
+  <b>Post:</b>
+  <%= @pcomment.post_id %>
+</p>
+
+<p>
+  <b>Createdat:</b>
+  <%= @pcomment.createdat %>
+</p>
+
+
+<%= link_to 'Edit', edit_pcomment_path(@pcomment) %> |
+<%= link_to 'Back', pcomments_path %>

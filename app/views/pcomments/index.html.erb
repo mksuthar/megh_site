@@ -1,0 +1,33 @@
+<h1>Listing pcomments</h1>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Authorid</th>
+    <th>Authorprovider</th>
+    <th>Content</th>
+    <th>Post</th>
+    <th>Createdat</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pcomments.each do |pcomment| %>
+  <tr>
+    <td><%= pcomment.author %></td>
+    <td><%= pcomment.authorid %></td>
+    <td><%= pcomment.authorprovider %></td>
+    <td><%= pcomment.content %></td>
+    <td><%= pcomment.post_id %></td>
+    <td><%= pcomment.createdat %></td>
+    <td><%= link_to 'Show', pcomment %></td>
+    <td><%= link_to 'Edit', edit_pcomment_path(pcomment) %></td>
+    <td><%= link_to 'Destroy', pcomment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pcomment', new_pcomment_path %>

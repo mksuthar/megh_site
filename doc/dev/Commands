@@ -1,0 +1,5 @@
+rails g scaffold post name:string category:string content:text cite:text tags:text author:string createdat:datetime updatedat:datetime lastcommentat:datetime --skip-stylesheets
+
+rails g scaffold pcomment author:string authorid:string authorprovider:string content:text post_id:integer createdat:datetime --skip-stylesheets
+
+rails generate controller staticPages home 
